@@ -1,0 +1,1 @@
+ALTER TABLE email_verification_codes RENAME COLUMN cose_hash TO code_hash;

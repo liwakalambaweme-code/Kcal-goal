@@ -75,6 +75,8 @@ public class User {
         this.updatedAt = Instant.now();
 
     }
+
+    //getters
     public UUID getId(){
         return id;
     }
@@ -93,10 +95,23 @@ public class User {
     public UserStatus getStatus(){
         return status;
     }    
-    public Instants getTermsVersion(){
+    public  String getTermsVersion(){
         return termsVersion;
     }
-    public 
+    public Instant getTermsAcceptedAt(){
+        return termsAcceptedAt;
+    }
+    public Instant getDeletionRequestedAt(){
+        return deletionRequestedAt;
+    }
+    public Instant getCreatedAt(){
+        return  createdAt;
+    }
+    public Instant getUpdatedAt(){
+        return updatedAt;
+    }
+
+    //setters
     public void setUsername(String username){
         this.username = username;
     }
@@ -113,6 +128,26 @@ public class User {
      public void setTermsAcceptedAt(Instant termsAcceptedAt){
          this.termsAcceptedAt= termsAcceptedAt;
 
+     }
+
+     public void setEmailVerifiedAt(Instant emailVerifiedAt) {
+         this.emailVerifiedAt = emailVerifiedAt;
+     }
+
+     public void setStatus(UserStatus status) {
+         this.status = status;
+     }
+
+     public void setDeletionRequestedAt(Instant deletionRequestedAt) {
+         this.deletionRequestedAt = deletionRequestedAt;
+     }
+
+     public void setCreatedAt(Instant createdAt) {
+         this.createdAt = createdAt;
+     }
+
+     public void setUpdatedAt(Instant updatedAt) {
+         this.updatedAt = updatedAt;
      }   
        
 }
