@@ -17,7 +17,7 @@ import java.util.UUID;
 @Table (name= "users")
 public class User {
 
-    @id 
+    @Id 
     @GeneratedValue (strategy= GenerationType.UUID)
     private UUID id;
 
@@ -78,11 +78,25 @@ public class User {
     public UUID getId(){
         return id;
     }
-
     public String getUsername(){
         return username;
     }
-
+    public String getEmail(){
+        return email;
+    }
+    public String getPasswordHash(){
+        return passwordHash;
+    }
+    public Instant getEmailVerifiedAt(){
+        return emailVerifiedAt;
+    }
+    public UserStatus getStatus(){
+        return status;
+    }    
+    public Instants getTermsVersion(){
+        return termsVersion;
+    }
+    public 
     public void setUsername(String username){
         this.username = username;
     }
